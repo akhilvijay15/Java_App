@@ -91,7 +91,7 @@ pipeline{
                 artifacts: [
                 [artifactId: 'Java_application',
                 classifier: '',
-                file: 'target/java-v2.jar',
+                file: 'my-service-' + version + '.jar',
                 type: 'jar']
         ]
      )
