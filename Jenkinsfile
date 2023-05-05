@@ -18,7 +18,7 @@ pipeline {
           post {
              success {
                   echo 'Now Archiving it...'
-                  archiveArtifacts artifacts: '**/target/*.jargit'
+                  archiveArtifacts artifacts: '**/target/*.jar'
              }
           }
        }
@@ -40,8 +40,8 @@ pipeline {
             }
             steps{
                  withSonarQubeEnv('sonar') {
-               sh '''${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=vprofile \
-                   -Dsonar.projectName=vprofile \
+               sh '''${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=Java_App \
+                   -Dsonar.projectName=Java_App \
                    -Dsonar.projectVersion=1.0 \
                    -Dsonar.sources=src/ \
                    -Dsonar.java.binaries=target/test-classes/com/visualpathit/account/controllerTest/ \
