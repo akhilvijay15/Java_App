@@ -89,7 +89,7 @@ pipeline{
                 repository: 'java-repo',
                 credentialsId: 'nexuslogin',
                 artifacts: [
-                [artifactId: 'vproapp4',
+                [artifactId: 'Java_application',
                 classifier: '',
                 file: 'target/java-v2.jar',
                 type: 'jar']
